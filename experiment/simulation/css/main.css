@@ -1,1 +1,588 @@
 /* You CSS goes in here */
+#mainContainer {
+    display: flex;
+    justify-content: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  
+  
+  }
+  
+  #container{
+    width: 1330px;
+    height: 610px;
+    flex-direction: column;
+    background: url("./images/background.jpg") no-repeat;
+    justify-content: center;
+  
+  }
+  
+  
+  
+  #header {
+    width: 100%;
+    height: 80px;
+    text-align: center;
+  }
+  
+  #simulation {
+    display: flex;
+    
+  }
+
+  
+
+
+  
+  #leftPane,
+  #rightPane {
+    flex: 1;
+    overflow-y: auto;
+   
+    width: 200px;
+    /* border-right: 1px solid #ccc; */
+  }
+  
+  #middlePane {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    flex-direction: column;
+    /* border-right: 1px solid #ccc; */
+    padding: 20px;
+  }
+  
+  canvas {
+    background-color: transparent;
+  }
+  
+  .controls {
+    margin-bottom: 10px;
+  }
+  
+  button {
+    padding: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: white;
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+  
+  button img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+  
+  button:hover {
+    border: 1px solid black;
+  }
+  
+  #stopwatch,
+  #stopwatch_comp {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  table,
+  th,
+  td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+    margin-top: 20px;
+  }
+  
+  th,
+  td {
+    background-color: #96c5e3;
+  }
+  
+  .comp_inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 10px;
+  }
+  
+  #formula {
+    overflow: hidden;
+    height: 50px;
+    width: 100px;
+  }
+  
+  td {
+    width: 200px;
+  }
+  
+
+
+  #energyCanvasContainer{
+    display: flex;
+    height: 250px;
+    
+  }
+  /* #cnv{
+    background-color: blanchedalmond;
+  } */
+
+    #energyCanvas{
+        background-color: whitesmoke;
+        border: 1px solid #000;
+    }
+
+    #energyBarCanvas{
+        background-color: whitesmoke;
+        border: 1px solid #000;
+    } 
+
+
+    #results {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+    
+    #results > div {
+        margin-left: 20px;
+        display: flex;
+        align-items: center;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    #results > div > div {
+        margin-right: 10px;
+    }
+    
+    [id$="_color"] {
+        width: 20px;
+        height: 20px;
+        background-color: #007bff; /* Default color */
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+    
+    #result1_color {
+        background-color: #28a745; /* Green for Kinetic Energy */
+    }
+    
+    #result2_color {
+        background-color: #5ac8fa; /* Yellow for Potential Energy */
+    }
+    
+    #result3_color {
+        background-color: #dc3545; /* Red for Total Energy */
+    }
+    
+    [id$="_heading"] {
+        font-weight: bold;
+        font-size: 14px;
+        flex: 1;
+        color: #333;
+    }
+    
+    [id$="_value"] {
+        font-size: 14px;
+        color: #555;
+        text-align: right;
+    }
+
+
+    #rightControls{
+       
+        margin-left: 40px;
+    }
+
+    #heading{
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    }
+
+    #lock-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      gap: 2px;
+  }
+
+  #lock-text{
+      font-size: 16px;
+      font-weight: bold;
+      font-family: 'Times New Roman', Times, serif;
+  }
+
+  #heading{
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  label{
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+
+
+
+  
+/* Modal Background */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 3% auto; /* Reduced margin */
+  padding: 15px; /* Reduced padding */
+  border: 1px solid #ccc; /* Lighter border */
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  border-radius: 8px;
+  max-height: 80vh;
+  overflow-y: auto; /* Enable vertical scroll if needed */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  position: relative;
+}
+
+/* Close Button Styling */
+.close-btn {
+  color: #666;
+  font-size: 18px; /* Slightly smaller font size */
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: black;
+  text-decoration: none;
+}
+
+/* Modal Background - Remove Black Overlay */
+#resultsModal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 700px; /* Adjusted max-width */
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  border-radius: 8px;
+  padding: 1rem; /* Adjusted padding */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  padding: 15px;
+  max-height: 70vh;
+  overflow-y: auto;
+  box-shadow: none;
+}
+
+/* Close Button Styling */
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  color: #000;
+}
+
+/* Table Wrapper */
+.table-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Table Container */
+.table-container {
+  overflow-x: auto;
+  width: 100%;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px; /* Reduced padding */
+  text-align: center;
+  font-size: 14px; /* Adjusted font size */
+}
+
+th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+td {
+  font-size: 13px;
+}
+
+/* Download Button */
+.download-button {
+  display: block;
+  margin: 15px auto 0;
+  padding: 10px 20px; /* Adjusted padding */
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.download-button:hover {
+  background-color: #45a049;
+}
+
+/* Additional Responsive Design */
+@media (max-width: 768px) {
+  .modal-content {
+    padding: 12px;
+  }
+
+  table th, table td {
+    padding: 8px;
+    font-size: 13px;
+  }
+
+  .download-button {
+    font-size: 13px;
+    padding: 8px 16px;
+  }
+
+  #resultsModal {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    padding: 8px;
+  }
+
+  table th, table td {
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  .download-button {
+    font-size: 12px;
+    padding: 6px 14px;
+  }
+}
+
+
+
+
+
+
+
+  #formula-button {
+    color: white; /* Text color */
+    background-color: #007bff; /* Primary blue color */
+    border: none; /* Remove border */
+    padding: 5px 10px; /* Adjust padding for a better size */
+    margin-top: 8px;
+    font-size: 16px; /* Professional font size */
+    font-weight: 500; /* Slightly bold text */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor for interactivity */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: auto;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  #formula-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+  }
+  
+  #formula-button:active {
+    background-color: #003d82; /* Even darker blue on click */
+    transform: translateY(0px); /* No lift on click */
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  #formulaeContainer {
+    padding: 20px;
+    background-color: #f7f7f7;  /* Slightly darker background for contrast */
+    border: 1px solid #e0e0e0;  /* Lighter, more subtle border */
+    border-radius: 8px;          /* Slightly rounded corners for a smoother look */
+    max-width: 800px;            /* Increased width for better content display */
+    margin: 20px auto;           /* Center the container with some margin */
+  }
+  
+  #formulaeContainer h3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    color: #333;                /* Darker text for better readability */
+    margin-bottom: 15px;
+    font-weight: 600;            /* Bold heading for emphasis */
+  }
+  
+  #formulaeList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #formulaeList li {
+    background-color: #ffffff;  /* Clean white background for better contrast */
+    border: 1px solid #ddd;     /* Subtle border */
+    border-radius: 6px;         /* Slightly rounded corners */
+    padding: 15px;              /* Increased padding for better spacing */
+    margin-bottom: 12px;        /* Margin between items */
+    text-align: left;           /* Left-aligned text for better readability */
+    font-size: 15px;            /* Slightly larger font for improved readability */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  /* Consistent font for professionalism */
+    color: #555;                /* Darker text color for better legibility */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+  }
+  
+  #formulaeList li:hover {
+    background-color: #f1f1f1;  /* Light hover effect for interactivity */
+    border-color: #bbb;         /* Slightly darker border on hover */
+  }
+  
+/* Styling for the observations button */
+#download-graph,
+#showObservationsBtn {
+  color: white; /* Text color */
+    background-color: #007bff; /* Primary blue color */
+    border: none; /* Remove border */
+    padding: 5px 10px; /* Adjust padding for a better size */
+    margin-top: 8px;
+    font-size: 16px; /* Professional font size */
+    font-weight: 500; /* Slightly bold text */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor for interactivity */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: auto;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+/* Hover effect for both buttons */
+#download-graph:hover{
+  
+  transform: translateY(-3px); /* Slight upward movement */
+
+}
+#formula-button:hover, #showObservationsBtn:hover {
+  background-color: #45a049; /* Darker green for formula button */
+  background-color: #0056b3; /* Darker blue for observations button */
+  transform: translateY(-3px); /* Slight upward movement */
+}
+
+/* Focus effect for both buttons */
+#formula-button:focus, #showObservationsBtn:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 5px 2px rgba(0, 123, 255, 0.5); /* Add blue outline for focus */
+}
+
+/* Active effect for both buttons */
+#formula-button:active, #showObservationsBtn:active {
+  transform: translateY(1px); /* Slight downward movement when clicked */
+}
+
+#button-container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2px;
+  gap : 5px
+}
+
+  
+
+
+.leftPaneContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+}
+
+
+#theoretical_results {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 5px;
+  padding: 8px;
+  border: 1px solid #99ccff;
+  border-radius: 8px;
+  background-color: #e6f7ff; /* Light blue background */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  font-size: 14px; /* Smaller font size */
+  color: #333;
+}
+
+#theoretical_results b {
+  font-weight: 700; /* Slightly lighter weight for a clean look */
+}
+
+#theoretical_results span {
+  display: block;
+  margin: 2px 0;
+}
+
+#observation-container{
+  display: flex;
+  gap: 4px;
+}
+
+#download-graph{
+  width: fit-content;
+  background-color: white;
+  color: #007bff;
+}
