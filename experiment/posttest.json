@@ -2,38 +2,174 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "How does the period of a pendulum change if the gravitational acceleration (g) decreases?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Period increases",
+        "b": "Period decreases",
+        "c": "Period remains unchanged",
+        "d": "Period becomes zero"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "As gravitational acceleration decreases, the period of the pendulum increases since T = 2π√l/g.",
+        "b": "Incorrect, the period increases when g decreases.",
+        "c": "Incorrect, the period depends on g.",
+        "d": "Incorrect, the period cannot be zero."
       },
       "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What happens to the total mechanical energy of the pendulum if air resistance is considered?",
+      "answers": {
+        "a": "It increases over time",
+        "b": "It decreases over time",
+        "c": "It remains constant",
+        "d": "It fluctuates periodically"
+      },
+      "explanations": {
+        "a": "Incorrect, air resistance causes energy loss, not gain.",
+        "b": "Correct, air resistance dissipates mechanical energy as heat.",
+        "c": "Incorrect, it remains constant only in an ideal pendulum.",
+        "d": "Incorrect, energy does not fluctuate periodically due to air resistance."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Which physical quantity is zero at the highest point of a pendulum’s swing?",
+      "answers": {
+        "a": "Potential energy",
+        "b": "Kinetic energy",
+        "c": "Total energy",
+        "d": "Angular displacement"
+      },
+      "explanations": {
+        "a": "Incorrect, potential energy is maximum at the highest point.",
+        "b": "Correct, kinetic energy is zero at the highest point as the velocity is zero.",
+        "c": "Incorrect, total energy is conserved.",
+        "d": "Incorrect, angular displacement is maximum at the highest point."
+      },
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "If the amplitude of a pendulum’s swing is doubled, the period:",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Doubles",
+        "b": "Halves",
+        "c": "Remains approximately the same",
+        "d": "Becomes zero"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Incorrect, the period does not double with amplitude for small angles.",
+        "b": "Incorrect, the period does not halve.",
+        "c": "Correct, the period remains nearly the same for small angular amplitudes.",
+        "d": "Incorrect, the period cannot be zero."
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
+    },
+    {
+      "question": "What is the primary cause of damping in a real pendulum?",
+      "answers": {
+        "a": "Gravity",
+        "b": "Tension in the string",
+        "c": "Air resistance",
+        "d": "Friction at the pivot"
+      },
+      "explanations": {
+        "a": "Incorrect, gravity is the restoring force, not a damping force.",
+        "b": "Incorrect, tension does not cause damping.",
+        "c": "Correct, air resistance is a major cause of damping.",
+        "d": "Partially correct, but air resistance is usually more significant."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "At what point is the tension in the string of a pendulum maximum?",
+      "answers": {
+        "a": "At the highest point",
+        "b": "At the lowest point",
+        "c": "Midway during the swing",
+        "d": "It remains constant"
+      },
+      "explanations": {
+        "a": "Incorrect, tension is not maximum at the highest point.",
+        "b": "Correct, tension is maximum at the lowest point due to the sum of gravitational and centripetal forces.",
+        "c": "Incorrect, tension varies throughout the swing.",
+        "d": "Incorrect, tension does not remain constant."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "In an ideal pendulum, the angular displacement follows:",
+      "answers": {
+        "a": "Exponential decay",
+        "b": "Parabolic motion",
+        "c": "Sinusoidal motion",
+        "d": "Circular motion"
+      },
+      "explanations": {
+        "a": "Incorrect, exponential decay describes damping, not ideal motion.",
+        "b": "Incorrect, the motion is not parabolic.",
+        "c": "Correct, angular displacement follows sinusoidal motion.",
+        "d": "Incorrect, the motion is not circular."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What happens to the maximum speed of the pendulum bob if the initial height is doubled?",
+      "answers": {
+        "a": "It remains the same",
+        "b": "It doubles",
+        "c": "It increases by √2",
+        "d": "It halves"
+      },
+      "explanations": {
+        "a": "Incorrect, the speed increases as the height increases.",
+        "b": "Incorrect, speed increases by a factor of √2, not 2.",
+        "c": "Correct, speed increases by √2 as energy is proportional to height.",
+        "d": "Incorrect, speed does not decrease with height."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Which factor does not affect the period of a pendulum?",
+      "answers": {
+        "a": "Length of the pendulum",
+        "b": "Gravitational acceleration",
+        "c": "Amplitude (for small angles)",
+        "d": "Mass of the bob"
+      },
+      "explanations": {
+        "a": "Incorrect, length directly affects the period.",
+        "b": "Incorrect, gravitational acceleration directly affects the period.",
+        "c": "Incorrect, amplitude has negligible effect for small angles.",
+        "d": "Correct, mass does not affect the period."
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is the phase difference between the kinetic energy and potential energy of a pendulum?",
+      "answers": {
+        "a": "0°",
+        "b": "45°",
+        "c": "90°",
+        "d": "180°"
+      },
+      "explanations": {
+        "a": "Incorrect, they are not in phase.",
+        "b": "Incorrect, the phase difference is not 45°.",
+        "c": "Correct, kinetic and potential energy are 90° out of phase.",
+        "d": "Incorrect, they are not completely out of phase."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
     }
   ]
 }
