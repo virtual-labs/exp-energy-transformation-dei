@@ -4,11 +4,11 @@
 <b>Discipline | <b> Mechanical Engineering
 :--|:--|
 <b> Lab | <b> Engineering Dynamics Lab
-<b> Experiment|     <b> CORIOLLI’S COMPONENT OF ACCELERATION
+<b> Experiment|     <b> Conservation of Total Mechanical Energy and Energy Transformation
 
 ### About the Experiment 
 
-To Determine Coriolis Component of acceleration.
+To validate the principle of conservation of total mechanical energy (TME) in a mechanical system by studying the transformation between potential energy (PE) and kinetic energy (KE) during motion, and to demonstrate that the total mechanical energy remains constant in an ideal system.
 
 <b>Name of Developer | <b> Mohd. Sharique Ahmad 
 :--|:--|
