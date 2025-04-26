@@ -163,6 +163,8 @@ const checkBox = () => {
     getElement('height_theoretical').innerText = `Initial Height: ${height.toFixed(3)} m`
     getElement('theoretical_container').hidden = false;
 
+    getElement('lock').disabled = true;
+
 
 
 
@@ -547,18 +549,33 @@ function drawEnergyGraphWithValues(TEarray, KEarray, PEarray, timeArray) {
 
 document.getElementById('download-graph').addEventListener('click', function() {
     const canvas = document.getElementById('energyCanvas');
-    
-    // Convert the canvas to an image (PNG)
-    const imageUrl = canvas.toDataURL('image/png');
-    
-    // Create a temporary link element
+    const width = canvas.width;
+    const height = canvas.height;
+
+    // Create a temporary canvas
+    const tempCanvas = document.createElement('canvas');
+    tempCanvas.width = width;
+    tempCanvas.height = height;
+
+    const ctx = tempCanvas.getContext('2d');
+
+    // Fill the background with white
+    ctx.fillStyle = 'white';
+    ctx.fillRect(0, 0, width, height);
+
+    // Draw the original canvas on top
+    ctx.drawImage(canvas, 0, 0);
+
+    // Convert to image
+    const imageUrl = tempCanvas.toDataURL('image/png');
+
+    // Create and trigger download link
     const link = document.createElement('a');
     link.href = imageUrl;
-    link.download = 'energy_graph.png';  // Set the filename for the image
-    
-    // Trigger the download
+    link.download = 'energy_graph.png';
     link.click();
 });
+
 
 
 
@@ -940,6 +957,7 @@ function animate(timestamp) {
     previousTime = timestamp;
 
     const currenttime = (performance.now() - startTime) / 1000;
+
     if (isAnimating) {
         updatePendulum(currenttime);
         drawPendulum();
@@ -962,10 +980,7 @@ function startAnimation() {
 }
 
 function stopAnimation() {
-    // if (!lockButton.checked) {
-    //     giveAlert()
-    //     return
-    // }
+ 
     if (isAnimating) {
         isAnimating = false;
         cancelAnimationFrame(animationFrameId);
@@ -1027,6 +1042,8 @@ const resetAnimation = () => {
     getElement('download-graph').hidden = true
     getElement('theoretical_container').hidden = true;
 
+    getElement('lock').disabled = false;
+
     elapsedTime = 0;
     i = 0
     oscillationCounting = 0
@@ -1042,4 +1059,4 @@ playButton.addEventListener("click", startAnimation);
 pauseButton.addEventListener("click", stopAnimation);
 resetButton.addEventListener("click", resetAnimation);
 // Initial drawing
-drawPendulum();//Your JavaScript goes in here
+drawPendulum();
