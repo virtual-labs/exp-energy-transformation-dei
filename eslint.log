@@ -1,0 +1,35 @@
+
+/home/runner/work/exp-energy-transformation-dei/exp-energy-transformation-dei/experiment/simulation/js/main.js
+    8:10  warning  'setComponentValues_comp' is defined but never used         no-unused-vars
+    9:5   warning  'comp_angle_input' is not defined                           no-undef
+   10:5   warning  'comp_length_input' is not defined                          no-undef
+   11:5   warning  'comp_radius_input' is not defined                          no-undef
+   12:5   warning  'comp_width_input' is not defined                           no-undef
+   13:5   warning  'comp_mass_input' is not defined                            no-undef
+   16:10  warning  'showInputs_comp' is defined but never used                 no-unused-vars
+   17:5   warning  'comp_angle_input' is not defined                           no-undef
+   18:5   warning  'comp_length_input' is not defined                          no-undef
+   19:5   warning  'comp_radius_input' is not defined                          no-undef
+   20:5   warning  'comp_width_input' is not defined                           no-undef
+   21:5   warning  'pendulumTypeSelect' is not defined                         no-undef
+   22:5   warning  'comp_mass_input' is not defined                            no-undef
+   23:5   warning  'comp_oscillations_input' is not defined                    no-undef
+   36:7   warning  'timeTakenBlock' is assigned a value but never used         no-unused-vars
+   37:7   warning  'timePeriodBlock' is assigned a value but never used        no-unused-vars
+   38:7   warning  'resultInertiaBlock' is assigned a value but never used     no-unused-vars
+   60:5   warning  'omega' is assigned a value but never used                  no-unused-vars
+   68:7   warning  'updateLengthValue' is assigned a value but never used      no-unused-vars
+   90:7   warning  'updateAngleValue' is assigned a value but never used       no-unused-vars
+  115:7   warning  'updateMassValue' is assigned a value but never used        no-unused-vars
+  121:7   warning  'checkBox' is assigned a value but never used               no-unused-vars
+  157:9   warning  'velocity' is assigned a value but never used               no-unused-vars
+  184:7   warning  'updateMomentOfInertia' is assigned a value but never used  no-unused-vars
+  225:11  warning  'mediumMarkInterval' is assigned a value but never used     no-unused-vars
+  502:11  warning  'timeStep' is assigned a value but never used               no-unused-vars
+  637:43  warning  'label' is defined but never used                           no-unused-vars
+  678:10  warning  'showFormulaeModal' is defined but never used               no-unused-vars
+  914:10  warning  'downloadResults' is defined but never used                 no-unused-vars
+  956:11  warning  'deltaTime' is assigned a value but never used              no-unused-vars
+
+✖ 30 problems (0 errors, 30 warnings)
+
