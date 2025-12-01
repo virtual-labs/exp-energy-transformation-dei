@@ -50,6 +50,7 @@ Where:
 <p align="center">
   <img src="images/1.png" alt="Pendulum System">
 </p>
+
 ---
 
 ### Observation  
