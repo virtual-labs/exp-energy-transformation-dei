@@ -48,7 +48,7 @@ Where:
 # Sample Data and Results
 
 <p align="center">
-  <img src="images/1.png" alt="Pendulum System">
+  <img src="images/4.png" alt="Pendulum System">
 </p>
 
 ---
