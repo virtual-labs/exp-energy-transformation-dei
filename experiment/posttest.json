@@ -170,6 +170,24 @@
       },
       "correctAnswer": "c",
       "difficulty": "intermediate"
+    },
+    {
+      "question": "A pendulum has a length of 1.2 m. Calculate its time period and frequency. (Hint: Use the formula T = 2π√(L/g))",
+      "answers": {
+        "a": "T = 2.20 s, f = 0.45 Hz",
+        "b": "T = 1.20 s, f = 0.83 Hz",
+        "c": "T = 2.50 s, f = 0.40 Hz",
+        "d": "T = 1.75 s, f = 0.57 Hz"
+      },
+      "explanations": {
+        "a": "Using T = 2π√(L/g) with L = 1.2 m and g ≈ 9.8 m/s² gives approximately 2.20 s. Frequency is f = 1/T ≈ 0.45 Hz.",
+        "b": "These values do not match the correct calculation using the pendulum formula.",
+        "c": "The time period is overestimated compared to the correct calculation.",
+        "d": "These values do not match the derived period and frequency."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
     }
+
   ]
 }

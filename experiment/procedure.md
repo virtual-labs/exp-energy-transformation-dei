@@ -45,3 +45,15 @@ Where:
 
 ---
 
+# Sample Data and Results
+
+<p align="center">
+  <img src="images/4.png" alt="Pendulum System">
+</p>
+
+---
+
+### Observation  
+From the sample data, the **total mechanical energy (TME)** remains nearly constant (**≈ 0.067 J**) throughout the oscillation. This confirms the **law of conservation of energy** within experimental accuracy.
+
+---

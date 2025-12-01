@@ -136,6 +136,24 @@
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
+    },
+    {
+      "question": "Where is the principle of pendulum motion or energy conservation commonly applied in real life?",
+      "answers": {
+        "a": "Car brakes",
+        "b": "Pendulum clocks",
+        "c": "Hydraulic lifts",
+        "d": "Wind turbines"
+      },
+      "explanations": {
+        "a": "Car brakes rely on friction, not pendulum motion or energy conservation principles.",
+        "b": "Pendulum clocks use the periodic motion of a pendulum to keep accurate time, directly applying pendulum motion and energy conservation.",
+        "c": "Hydraulic lifts use fluid pressure, not pendulum motion.",
+        "d": "Wind turbines convert wind energy to electrical energy and do not involve pendulum-like motion."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
     }
+
   ]
 }
