@@ -1,0 +1,159 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "What is the primary force that acts on a pendulum in motion?",
+      "answers": {
+        "a": "Friction",
+        "b": "Gravity",
+        "c": "Tension",
+        "d": "Centripetal force"
+      },
+      "explanations": {
+        "a": "Friction is a minor force and not the primary force in pendulum motion.",
+        "b": "Gravity is the primary force acting on a pendulum in motion.",
+        "c": "Tension acts along the string but does not drive the pendulum's motion.",
+        "d": "Centripetal force is not directly responsible for pendulum motion."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What type of energy is maximum at the highest point of a pendulum's swing?",
+      "answers": {
+        "a": "Kinetic Energy",
+        "b": "Potential Energy",
+        "c": "Total Mechanical Energy",
+        "d": "Thermal Energy"
+      },
+      "explanations": {
+        "a": "Kinetic energy is zero at the highest point.",
+        "b": "Potential energy is maximum at the highest point of the swing.",
+        "c": "Total mechanical energy is constant throughout the motion.",
+        "d": "Thermal energy is not relevant in an ideal pendulum."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What determines the period of a pendulum?",
+      "answers": {
+        "a": "Mass of the bob",
+        "b": "Length of the pendulum",
+        "c": "Amplitude of the swing",
+        "d": "Initial velocity"
+      },
+      "explanations": {
+        "a": "The mass of the bob does not affect the period.",
+        "b": "The length of the pendulum directly affects the period.",
+        "c": "Amplitude only affects the period if it is very large.",
+        "d": "Initial velocity does not determine the period."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "For a pendulum, the total mechanical energy is constant if:",
+      "answers": {
+        "a": "Air resistance is present",
+        "b": "Friction is negligible",
+        "c": "The amplitude is large",
+        "d": "The mass is varied"
+      },
+      "explanations": {
+        "a": "Air resistance causes energy dissipation.",
+        "b": "Mechanical energy is constant if friction is negligible.",
+        "c": "Large amplitudes can introduce non-linear effects.",
+        "d": "Mass variation does not occur in a typical pendulum."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "In an ideal pendulum, which of the following remains constant throughout the motion?",
+      "answers": {
+        "a": "Kinetic energy",
+        "b": "Potential energy",
+        "c": "Total mechanical energy",
+        "d": "Angular velocity"
+      },
+      "explanations": {
+        "a": "Kinetic energy varies as the pendulum swings.",
+        "b": "Potential energy varies as the pendulum swings.",
+        "c": "Total mechanical energy remains constant.",
+        "d": "Angular velocity changes during the motion."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "The restoring force in a pendulum is provided by:",
+      "answers": {
+        "a": "Tension in the string",
+        "b": "Gravitational force",
+        "c": "Centripetal force",
+        "d": "Frictional force"
+      },
+      "explanations": {
+        "a": "Tension acts perpendicular to the restoring force.",
+        "b": "Gravitational force provides the restoring force.",
+        "c": "Centripetal force is not the restoring force.",
+        "d": "Frictional force opposes motion but is not the restoring force."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "If the length of a pendulum increases, its period:",
+      "answers": {
+        "a": "Decreases",
+        "b": "Increases",
+        "c": "Remains constant",
+        "d": "Becomes zero"
+      },
+      "explanations": {
+        "a": "Period increases with length, not decreases.",
+        "b": "Period increases with an increase in length.",
+        "c": "Period depends on length and does not remain constant.",
+        "d": "Period cannot become zero in a pendulum."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "The motion of a pendulum can be approximated to simple harmonic motion when:",
+      "answers": {
+        "a": "Air resistance is significant",
+        "b": "The string is short",
+        "c": "The angle of the swing is small",
+        "d": "The mass of the bob is large"
+      },
+      "explanations": {
+        "a": "Air resistance disturbs simple harmonic motion.",
+        "b": "String length does not determine harmonic motion.",
+        "c": "A small swing angle allows for the approximation of simple harmonic motion.",
+        "d": "Mass does not affect the approximation to simple harmonic motion."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Where is the principle of pendulum motion or energy conservation commonly applied in real life?",
+      "answers": {
+        "a": "Car brakes",
+        "b": "Pendulum clocks",
+        "c": "Hydraulic lifts",
+        "d": "Wind turbines"
+      },
+      "explanations": {
+        "a": "Car brakes rely on friction, not pendulum motion or energy conservation principles.",
+        "b": "Pendulum clocks use the periodic motion of a pendulum to keep accurate time, directly applying pendulum motion and energy conservation.",
+        "c": "Hydraulic lifts use fluid pressure, not pendulum motion.",
+        "d": "Wind turbines convert wind energy to electrical energy and do not involve pendulum-like motion."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    }
+
+  ]
+}
