@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Conservation of Total Mechanical Energy and Energy Transformation</title>
+      <link rel="stylesheet" href="./css/main.css">
+   </head>
+   <body>
+      <div id="mainContainer">
+         <div id="container">
+            <div id="header">
+               <h2 id="heading" >Conservation of Total Mechanical Energy <br> and Energy Transformation</h2>
+            </div>
+            <div id="simulation">
+
+               <div id="leftPane" class="leftPaneContainer">
+                  
+                  <div>
+                  <div style=" flex-direction: column;">
+                     <label for="length">Length of the Pendulum (L): </label>
+                     <div>
+                        <input
+                           type="range"
+                           id="length"
+                           min="1"
+                           max="5"
+                           step="0.2"
+                           value="2"
+                           oninput="updateLengthValue(this.value)"
+                           />
+                        <span id="lengthValue">2</span> m
+                     </div>
+                  </div>
+                  <div style="margin-top: 30px; flex-direction: column;">
+                     <label for="mass">Mass of the Bob (m): </label>
+                     <div>
+                        <input
+                           type="range"
+                           id="mass"
+                           min="0.1"
+                           max="2"
+                           step="0.1"
+                           value="0.1"
+                           oninput="updateMassValue(this.value)"
+                           />
+                        <span id="massValue">0.1</span> kg
+                     </div>
+                  </div>
+                  <div style="margin-top: 30px; flex-direction: column;">
+                     <label for="angle">Initial Angular Displacement (θ<sub>0</sub>): </label>
+                     <div>
+                        <input
+                           type="range"
+                           id="angle"
+                           min="-30"
+                           max="30"
+                           value="15"
+                           step="5"
+                           oninput="updateAngleValue(this.value)"
+                           />
+                        <span id="angleValue">15</span>°
+                     </div>
+                  </div>
+                  <div style="margin-top: 30px; flex-direction: column;">
+                     <label for="oscillations" id="countOscillationText">Number of Oscillations (n): </label>
+                     <input
+    type="number"
+    id="oscillations"
+    min="1"
+    max="5"
+    value="3"
+/>
+
+                  </div>
+
+
+                  <div hidden id="theoretical_container">
+
+                  <div id="theoretical_results">
+                     <b><span id="height_theoretical">Initial Height: 0 m</span></b>
+                     <b><span id="velocity_theoretical">Initial Velocity: 0 m/s</span></b>
+                   </div>
+                  </div>
+
+               </div>
+               
+
+                  <div id="lock-container">
+                     <span id="lock-text" style="font-size: 16px; color: black; font-weight: bold;">Lock</span>
+                     <input type="checkbox" id="lock" style="margin-top: 10px; transform: scale(1.5);" onclick="checkBox()">
+                  </div>
+               </div>
+               <div id="middlePane">
+                  <canvas id="cnv" width="400px" height="230px"></canvas>
+                  <!-- <canvas id="cnv2" hidden width="700px" height="600px"></canvas> -->
+                  <div id="energyCanvasContainer">
+                     <canvas id="energyCanvas" width="400" height="300"></canvas>
+                     <canvas id="energyBarCanvas" width="280" height="300"></canvas>
+                  </div>
+               </div>
+               <div id="rightPane">
+                  <div id="rightControls">
+                     <div class="controls">
+                        <div class="control_heading"><b>Controls:</b></div>
+                        <div class="play">
+                           Release
+                           <button type="play" id="playButton">
+                           <img src="./images/play.png" />
+                           </button>
+                        </div>
+                        <div class="pause">
+                           Pause
+                           <button type="button" id="pauseButton">
+                           <img src="./images/pause.png" alt="Pause" />
+                           </button>
+                        </div>
+                        <div id="reset">
+                           Reset
+                           <button type="reset" id="resetButton">
+                           <img src="./images/reset.png" />
+                           </button>
+                        </div>
+                     </div>
+                     <div class="stopwatch" id="stopwatch">Time: 0.00 s</div>
+                     <div style="margin-top: 20px">
+                        <span id="oscillationCount">Oscillation count : 0</span>
+                     </div>
+                  </div>
+                  <div style="display: flex; flex-direction: column; align-items: center;">
+                     <div id="results">
+                        <div id="result1">
+                           <div id="result1_color"></div>
+                           <div id="result1_heading">Kinetic Energy</div>
+                           <div id="result1_value">0 J</div>
+                        </div>
+                        <div id="result2">
+                           <div id="result2_color"></div>
+                           <div id="result2_heading">Potential Energy</div>
+                           <div id="result2_value">0.07 J</div>
+                        </div>
+                        <div id="result3">
+                           <div id="result3_color"></div>
+                           <div id="result3_heading">Total Energy</div>
+                           <div id="result3_value">0.07 J</div>
+                        </div>
+                     </div>
+                     <div id="button-container">
+                     <div id="observation-container">
+                      <button id="formula-button" onclick="showFormulaeModal()">Show Formulae</button>
+                      <button hidden id="showObservationsBtn">Show Observations</button>
+                     </div>
+                      <button hidden  id="download-graph">Download Graph</button>
+                    </div>
+                    
+                    
+                  </div>
+                  <!-- Formulae Modal Structure -->
+                  <div id="formulaeModal" class="modal">
+                     <div class="modal-content">
+                        <!-- Close Button -->
+                        <span id="closeFormulaeModal" class="close-button">&times;</span>
+                        <!-- Formulae Container -->
+                        <div id="formulaeContainer">
+                           <h3>Formulae</h3>
+                           <ul id="formulaeList"></ul>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Modal Structure -->
+                  <div id="resultsModal">
+                     <div class="modal-content">
+                        <!-- Close Button -->
+                        <span id="closeResultsModal" class="close-button">&times;</span>
+                        <!-- Modal Header -->
+                        <h2 class="modal-title">Results and Observations</h2>
+                        <!-- Input Data Container -->
+                        <div id="inputDataContainer" class="input-data-container">
+                           <ul id="inputDataList"></ul>
+                        </div>
+                        <!-- Table Container -->
+                        <div id="resultsTableContainer" class="results-table-container">
+                           <!-- Table will be populated dynamically -->
+                        </div>
+                        <!-- Download Button -->
+                        <button id="download-btn" class="download-button" onclick="downloadResults()">Download Data</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      </div>
+      <script src="./js/main.js"></script>
+      <div id="copyright" title="Developer : Harsh Pathak,Aysha and Ambuj Kulshrestha , Dayalbagh Educational Instiute,Agra "></div>
+      <div id="Developer_information" 
+         title="Developer Name:
+         1.Harsh Pathak
+         (06hpathak@gmail.com)
+         2.Aysha
+         (satsangiaysha@gmail.com)
+         3.Ambuj Kulshrestha
+         (ambujkul.dei@gmail.com)
+         Instiute Name: Dayalbagh Educational Instiute, Agra">
+      </div>
+   <script src="../assets/js/iframeResize.js"></script>
+        
+        </body>
+</html>

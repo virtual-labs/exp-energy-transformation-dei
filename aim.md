@@ -1,0 +1,1 @@
+### To validate the principle of conservation of total mechanical energy (TME) in a mechanical system by studying the transformation between potential energy (PE) and kinetic energy (KE) during motion, and to demonstrate that the total mechanical energy remains constant in an ideal system.
