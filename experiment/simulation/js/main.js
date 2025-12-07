@@ -983,10 +983,12 @@ function stopAnimation() {
  
     if (isAnimating) {
         isAnimating = false;
+        pendulum.angle = 0;
         cancelAnimationFrame(animationFrameId);
         const currentTime = (performance.now() - startTime) / 1000; // Time in seconds
         elapsedTime = currentTime; // Save elapsed time
     }
+
 }
 
 const resetAnimation = () => {
@@ -1009,7 +1011,7 @@ const resetAnimation = () => {
     setText("lengthValue", lengthInput.value);
     setText("massValue", getElement('mass').value);
     setText("stopwatch", `Time: 0.00 s`);
-    setText("countOscillationText", `Oscillation Count :`);
+    setText("countOscillationText", `Number of Oscillations (n):`);
     setText("oscillationCount", `Oscillation count : 0`);
     getElement('height_theoretical').innerText = `Initial Height: ${0} m`
 
